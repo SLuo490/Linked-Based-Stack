@@ -18,7 +18,7 @@ Node<ItemType>::Node(const ItemType &an_item, Node<ItemType> *next_node_ptr) : i
 template <typename ItemType>
 bool Node<ItemType>::setNext(Node<ItemType> *next_node_ptr)
 {
-  next_ = new_node_ptr;
+  next_ = next_node_ptr;
 }
 
 template <typename ItemType>
