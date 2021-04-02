@@ -34,6 +34,20 @@ void Stack<ItemType>::push(const ItemType &new_entry)
 template <typename ItemType>
 void Stack<ItemType>::pop()
 {
+  //create a temp ptr and set it to top
+  Node<ItemType> *temp_ptr = top_;
+
+  //set top_ to next node
+  top_ = top_->getNext();
+
+  //set temp next ptr to null ptr
+  temp_ptr->setNext(nullptr);
+
+  //delete temp ptr
+  delete temp_ptr;
+
+  //set temp ptr to nullptr
+  temp_ptr = nullptr;
 }
 
 template <typename ItemType>

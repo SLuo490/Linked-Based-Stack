@@ -10,6 +10,10 @@ int main()
   new_stack->push(12);
   new_stack->push(12);
 
+  new_stack->pop();
+  new_stack->pop();
+  new_stack->pop();
+
   new_stack->display();
 
   return 0;
