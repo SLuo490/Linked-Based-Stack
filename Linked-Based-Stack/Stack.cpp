@@ -22,6 +22,12 @@ template <typename ItemType>
 Stack<ItemType>::Stack(const Stack<ItemType> &a_stack)
 {
   //copy constructor
+  Node<ItemType> *temp = a_stack.top_;
+
+  while (temp != nullptr)
+  {
+    push();
+  }
 }
 
 template <typename ItemType>
