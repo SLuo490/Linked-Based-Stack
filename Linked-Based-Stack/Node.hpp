@@ -8,19 +8,52 @@ private:
   ItemType item_;
 
 public:
-  //empty node
+  /**
+   * @brief Construct a empty node
+   * 
+   */
   Node();
-  //constructor with 1 items
+
+  /**
+   * @brief Construct a new Node object with one item
+   * 
+   * @param an_item Item to node
+   */
   Node(const ItemType &an_item);
-  //node with linked item
+  /**
+   * @brief Construct a new Node object with item and new node ptr
+   * 
+   * @param an_item Item to new node
+   * @param next_node_ptr Pointer to next node
+   */
   Node(const ItemType &an_item, Node<ItemType> *next_node_ptr);
-  //set next ptr
+  /**
+   * @brief Set the Next object
+   * 
+   * @param next_node_ptr Pointer to the next node
+   * @return true If pointer is set next
+   * @return false If pointer is not set Next
+   */
   bool setNext(Node<ItemType> *next_node_ptr);
-  //set Item
+
+  /**
+   * @brief Set the Item object
+   * 
+   * @param an_item Item to set into node
+   */
   void setItem(const ItemType &an_item);
-  //get item
+  /**
+   * @brief Get the Item object
+   * 
+   * @return ItemType ItemType to return
+   */
   ItemType getItem() const;
-  //get next ptr
+
+  /**
+   * @brief Get the Next object
+   * 
+   * @return Next Pointer
+   */
   Node<ItemType> *getNext() const;
 };
 #include "Node.cpp"

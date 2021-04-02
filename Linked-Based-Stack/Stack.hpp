@@ -55,12 +55,10 @@ public:
   bool isEmpty() const;
 
   /**
-     * @brief check if stack is full or not
-     * 
-     * @return true if stack is full
-     * @return false  if stack is not full
-     */
-  bool ifFull() const;
+   * @brief display the stack
+   * 
+   */
+  void display() const;
 
 private:
   /**

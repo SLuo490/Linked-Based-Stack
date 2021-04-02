@@ -19,6 +19,7 @@ template <typename ItemType>
 bool Node<ItemType>::setNext(Node<ItemType> *next_node_ptr)
 {
   next_ = next_node_ptr;
+  return true;
 }
 
 template <typename ItemType>
