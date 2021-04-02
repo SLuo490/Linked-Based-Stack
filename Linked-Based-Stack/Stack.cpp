@@ -5,13 +5,17 @@
 template <typename ItemType>
 Stack<ItemType>::Stack() : top_(nullptr)
 {
-  //initialize top_ tonullptr
 }
 
 template <typename ItemType>
 Stack<ItemType>::~Stack()
 {
-  //pop every item in stack
+  //loop until end of list
+  while (top_ != nullptr)
+  {
+    //remove top of the list
+    pop();
+  }
 }
 
 template <typename ItemType>
@@ -29,6 +33,9 @@ void Stack<ItemType>::push(const ItemType &new_entry)
   top_ = new_node;
   //set new_node = nullptr (DON'T DELETE, CREATE INFINITE LOOP)
   new_node = nullptr;
+
+  //increment item_count_
+  item_count_++;
 }
 
 template <typename ItemType>
@@ -48,6 +55,9 @@ void Stack<ItemType>::pop()
 
   //set temp ptr to nullptr
   temp_ptr = nullptr;
+
+  //decrement item_count_
+  item_count_--;
 }
 
 template <typename ItemType>
@@ -60,6 +70,7 @@ template <typename ItemType>
 int Stack<ItemType>::size() const
 {
   //return item_count_
+  return item_count_;
 }
 
 template <typename ItemType>
