@@ -53,6 +53,7 @@ void Stack<ItemType>::pop()
 template <typename ItemType>
 ItemType Stack<ItemType>::top() const
 {
+  return top_->getItem();
 }
 
 template <typename ItemType>
